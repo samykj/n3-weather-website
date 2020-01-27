@@ -14,7 +14,7 @@ const forecast = (lat,long,callback)=>{
     }
     // response works
     else{
-      callback(undefined, response.body.daily.summary + ' It is currently ' + response.body.currently.temperature + ' degress out. There is a ' + response.body.currently.precipProbability + '% chance of rain.'+'Today\'s High Temperature is'+response.body.daily.data[0].temperatureHigh);
+      callback(undefined, response.body.daily.summary + ' It is currently ' + response.body.currently.temperature + ' degress out. There is a ' + response.body.currently.precipProbability + '% chance of rain.'+'Today\'s High Temperature is '+response.body.daily.data[0].temperatureHigh);
     }
   });
 }
