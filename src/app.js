@@ -4,7 +4,7 @@ const hbs = require('hbs')
 const geocode = require("./utils/geocode.js");
 const forecast = require("./utils/forecast.js");
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3001
 
 
 // Define paths for Express config
@@ -36,7 +36,7 @@ app.get('/about', (req, res) => {
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        helpText: 'This is some helpful text.',
+        helpText: 'This is help section for detail about the code',
         title: 'Help',
         name: 'Samyak Jain'
     })
@@ -69,13 +69,6 @@ app.get('/weather', (req, res) => {
         
 })
 
-app.get('/help/*', (req, res) => {
-    res.render('404', {
-        title: '404',
-        name: 'Samyak Jain',
-        errorMessage: 'Help article not found.'
-    })
-})
 
 app.get('*', (req, res) => {
     res.render('404', {
