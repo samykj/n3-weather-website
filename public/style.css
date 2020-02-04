@@ -1,0 +1,83 @@
+*{
+  padding: 0;margin: 0;
+  box-sizing: border-box;
+  /* border: 1px solid green; */
+}
+body{
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('./images//location_img3.jpg');
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+.search-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  
+}
+.result-box{
+  margin-top: 10px;
+  height: 10vh;
+}
+#message-1,#message-2{
+  color: white;
+}
+.search-field{
+  background:rgba(177, 213, 220, 0.5);
+  background: white;
+  padding: 10px 20px;
+  border-radius: 100px;
+  box-shadow:4px 5px 3px rgba(0, 0, 0, 0.347);
+  width: 76%;
+}
+.search-location{
+  width: 100%;
+  position: absolute;
+  top:23%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  /* color: white; */
+  font-size: 120%;
+  text-shadow: 2px 3px rgba(0, 0, 0, 0.347);
+}
+.nav-bg{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.136),rgba(0, 0, 0, 0.306));
+}
+input{
+  border: none;
+  background: inherit;
+  outline: none;
+  width: 85%;
+}
+.search-btn{
+  border: none;
+  background: transparent;
+  outline: none;
+}
+.main-content{
+  background: linear-gradient(rgba(0, 0, 0, 0.136),rgba(0, 0, 0, 0.306));
+  height: 60vh;
+  margin: 20px auto;
+  padding: 20px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  color: white;
+  word-spacing: 2px;
+  font-size: 35px;
+}
+
+@media screen and (min-width: 601px) {
+  .search-location {
+    font-size: 2.5rem;
+  }
+  .search-field{
+    width: 60%;
+  }
+}

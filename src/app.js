@@ -4,7 +4,7 @@ const hbs = require('hbs')
 const geocode = require("./utils/geocode.js");
 const forecast = require("./utils/forecast.js");
 const app = express()
-const port = process.env.PORT || 3001
+const port = process.env.PORT || 3003
 
 
 // Define paths for Express config
@@ -21,25 +21,15 @@ hbs.registerPartials(partialsPath)
 app.use(express.static(publicDirectoryPath))
 
 app.get('', (req, res) => {
-    res.render('index', {
-        title: 'Weather',
-        name: 'Samyak Jain'
-    })
+    res.render('index')
 })
 
 app.get('/about', (req, res) => {
-    res.render('about', {
-        title: 'About Me',
-        name: 'Samyak Jain'
-    })
+    res.render('about')
 })
 
 app.get('/help', (req, res) => {
-    res.render('help', {
-        helpText: 'This is help section for detail about the code',
-        title: 'Help',
-        name: 'Samyak Jain'
-    })
+    res.render('help')
 })
 
 app.get('/weather', (req, res) => {
@@ -66,18 +56,15 @@ app.get('/weather', (req, res) => {
             })
         });
     });
-        
 })
 
 
 app.get('*', (req, res) => {
     res.render('404', {
-        title: '404',
-        name: 'Samyak Jain',
         errorMessage: 'Page not found.'
     })
 })
 
 app.listen(port, () => {
-    console.log('Server is up on port 3000.')
+    console.log('Server is up on port',port)
 })
